@@ -224,7 +224,7 @@ fun delexpression(expression: String): String {
 @Composable
 fun CalculatorButton(modifier: Modifier=Modifier, text:String="0", isFunction: Boolean=false,onClick:(String) ->Unit={})
 {
-    Button(modifier = modifier.size(72.dp).padding(6.dp).clip(CircleShape),
+    Button(modifier = modifier.size(72.dp).padding(8.dp).clip(CircleShape),
         onClick = { onClick(text) }, colors = ButtonDefaults.buttonColors(containerColor = if(isFunction && text=="="
             || text=="AC")
         {
@@ -238,7 +238,7 @@ fun CalculatorButton(modifier: Modifier=Modifier, text:String="0", isFunction: B
         {
             MaterialTheme.colorScheme.inverseSurface
         })) {
-        Text(text= text, style = TextStyle(fontSize = 24.sp, color = if(isFunction && text!="=" && text!="AC")
+        Text(text= text, style = TextStyle(fontSize = 27.sp, color = if(isFunction && text!="=" && text!="AC")
         {
             MaterialTheme.colorScheme.inverseSurface
         }
